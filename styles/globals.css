@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #08142b; /* Background of the track */
+  border-radius: 999px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #3e3e3e; /* Color of the thumb */
+  border-radius: 99px; /* Make the thumb curved */
+  height: 1px;/* Rounded corners */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3; /* Change the color to dark black on hover */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow: hidden;
+  }
+}
+
+/* global.css */
+
+/* width */
+.thin-scrollbar::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+
+/* Track */
+.thin-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Handle */
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* corner */
+.thin-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Dark mode ka table */
+/* #0f172abf */
+.dark .dark-container{
+  background: #0f1729;
+}
+
+.dark .dark-container .ka-tbody {
+  background: #0f1729;
+}
+
+.dark .dark-container .ka-row {
+  border-top-color: #151e3d;
+  border-bottom-color: #151e3d;
+}
+
+.dark .dark-container .ka-cell {
+  color: #ababab;
+}
+
+.dark .ka-row-selected{
+  background: #1c274f;
+}
+
+.dark .dark-container .ka-thead-background {
+  background: #151e3d;
+  color: #ababab;
+}
+
+.dark .dark-container .ka-paging {
+  background: #151e3d;
+}
+
+.fixed-child-table > div {
+  overflow: visible;
+}
+
+.fixed-child-table thead, .fixed-child-table th{
+  background-color: #f3f4f6;
+}
+
+.dark .fixed-child-table thead, .dark .fixed-child-table th{
+  background-color: #111827;
+}
+
+.fixed-child-table thead th {
+  position: sticky;
+  top: 0;
+}
+
+.select-custom:disabled svg {
+  opacity: 0;
+}
